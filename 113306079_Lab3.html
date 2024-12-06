@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<div>
+	<h1>
+		113306079_Lab3_Number Guessing Game
+	</h1>
+</div>
+<script type="text/javascript">
+	var attempt = 7;
+	var min = 1;
+	var max = 100;
+	var answer = Math.floor(Math.random()*100)+1;
+	var guess;
+
+	while(attempt>=0){
+		var guess = window.prompt("Your enter number:");
+		attempt--;
+		if(guess > answer){
+			max = guess;
+		}else if(guess < answer){
+			min = guess;
+		}
+
+		if(guess == answer){
+			alert("Bingo!!!")
+			attempt = 0;
+		}else if(guess == 1||guess == 100){
+			alert("Number is not in the range.")
+		}else if(guess != answer){
+			alert("You got wrong answer.Answer is in the range from "+min+" to "+max)
+			
+		}
+		 if(attempt == 0){
+			alert("The answer is "+answer)
+
+		}
+
+	}
+</script>
+</body>
+</html>
